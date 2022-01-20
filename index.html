@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Node JS Express Form Submission Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <h1>Mostrar todos libros</h1>
+        <form action="/lista" method="POST">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Mostrar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <h1>Busca un libro por ISBN </h1>
+        <form action="/busqueda" method="POST">
+            <div class="form-group">
+                <label for="isbn">ISBN</label>
+                <input type="text" class="form-control" id="isbn" aria-describedby="emailHelp"
+                    placeholder="Introduce el ISBN" name="isbn" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+
+    </div>
+    <div class="container">
+        <h1>Insertar libro en la Base de Datos </h1>
+        <form action="/insertar" method="POST">
+            <div class="form-group">
+                <label for="titulo">Título del libro</label>
+                <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp"
+                    placeholder="Introduce el Título del libro" name="titulo">
+            </div>
+            <div class="form-group">
+                <label for="isbn">ISBN*</label>
+                <input type="text" class="form-control" id="isbn" aria-describedby="emailHelp"
+                    placeholder="Introduce el ISBN" name="isbn" required>
+            </div>
+            <div class="form-group">
+                <label for="num_pag">Número de páginas</label>
+                <input type="text" class="form-control" id="num_pag" aria-describedby="emailHelp"
+                    placeholder="Introduce el número de páginas" name="num_pag">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <input type="text" class="form-control" id="tipo" aria-describedby="emailHelp"
+                    placeholder="Introduce el tipo de libro" name="tipo">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre del Autor</label>
+                <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp"
+                    placeholder="Introduce el nombre del autor" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos*</label>
+                <input type="text" class="form-control" id="apellidos" aria-describedby="emailHelp"
+                    placeholder="Introduce los apellidos del autor" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_libros">Tipo de libros</label>
+                <input type="text" class="form-control" id="tipo_libros" aria-describedby="emailHelp"
+                    placeholder="Introduce el tipo de libros" name="tipo_libros">
+            </div>
+            <div class="form-group">
+                <label for="ano_nacimiento">Año de nacimiento</label>
+                <input type="text" class="form-control" id="ano_nacimiento" aria-describedby="emailHelp"
+                    placeholder="Introduce el año de nacimiento" name="ano_nacimiento">
+            </div>
+            <p>Los campos con * son obligatorios</p>
+            <button type="submit" class="btn btn-primary">Insertar</button>
+        </form>
+    </div>
+</body>
+
+</html>
